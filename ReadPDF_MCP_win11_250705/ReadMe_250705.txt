@@ -1,0 +1,13 @@
+"ReadPDF_MCP": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\Users\\wonta\\ReadPDF_MCP",
+        "run",
+        "ReadPDF_MCP.py"
+      ]
+    }
+
+
+# Windows PowerShell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
