@@ -1,0 +1,110 @@
+[
+  {
+    "date": "2026-01-26",
+    "sleep": {
+      "hours": 7.5,
+      "quality": "good"
+    },
+    "inbody": {
+      "weight": 70.5,
+      "muscle": 35.2,
+      "fatper": 18.5
+    },
+    "study": [
+      {"subject": "Python", "minutes": 120},
+      {"subject": "MongoDB", "minutes": 90}
+    ],
+    "bloodpressure": {
+      "High": 120,
+      "low": 80,
+      "bpm": 72
+    },
+    "expenses": [
+      {"category": "식비", "amount": 15000},
+      {"category": "교통", "amount": 5000},
+      {"category": "교육", "amount": 30000}
+    ],
+    "exercise": [
+      {"subject": "걷기", "steps/count": 10000},
+      {"subject": "런닝", "steps/count": 5000}
+    ],
+    "food": [
+      {"breakfast": "오트밀, 바나나, 우유"},
+      {"lunch": "샐러드, 치킨, 현미밥"},
+      {"dinner": "연어구이, 야채볶음"},
+      {"refreshments": "사과, 아몬드"}
+    ],
+    "mood": "상쾌함"
+  },
+  {
+    "date": "2026-01-25",
+    "sleep": {
+      "hours": 6.5,
+      "quality": "fair"
+    },
+    "inbody": {
+      "weight": 70.8,
+      "muscle": 35.0,
+      "fatper": 19.0
+    },
+    "study": [
+      {"subject": "Python", "minutes": 60},
+      {"subject": "Math", "minutes": 45}
+    ],
+    "bloodpressure": {
+      "High": 125,
+      "low": 82,
+      "bpm": 75
+    },
+    "expenses": [
+      {"category": "식비", "amount": 20000},
+      {"category": "쇼핑", "amount": 50000}
+    ],
+    "exercise": [
+      {"subject": "걷기", "steps/count": 8000}
+    ],
+    "food": [
+      {"breakfast": "토스트, 계란"},
+      {"lunch": "파스타"},
+      {"dinner": "삼겹살, 쌈채소"},
+      {"refreshments": "커피, 쿠키"}
+    ],
+    "mood": "약간 피곤함"
+  },
+  {
+    "date": "2026-01-24",
+    "sleep": {
+      "hours": 8.0,
+      "quality": "excellent"
+    },
+    "inbody": {
+      "weight": 70.2,
+      "muscle": 35.5,
+      "fatper": 18.0
+    },
+    "study": [
+      {"subject": "MongoDB", "minutes": 150},
+      {"subject": "Docker", "minutes": 90}
+    ],
+    "bloodpressure": {
+      "High": 118,
+      "low": 78,
+      "bpm": 68
+    },
+    "expenses": [
+      {"category": "식비", "amount": 12000},
+      {"category": "교통", "amount": 4000}
+    ],
+    "exercise": [
+      {"subject": "걷기", "steps/count": 12000},
+      {"subject": "스쿼트", "steps/count": 50}
+    ],
+    "food": [
+      {"breakfast": "그릭요거트, 그래놀라"},
+      {"lunch": "김치찌개, 밥"},
+      {"dinner": "두부스테이크, 샐러드"},
+      {"refreshments": "단백질 쉐이크"}
+    ],
+    "mood": "매우 좋음"
+  }
+]
