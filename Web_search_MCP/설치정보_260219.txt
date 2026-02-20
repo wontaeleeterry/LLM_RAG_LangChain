@@ -1,0 +1,24 @@
+C:\Users\wonta 에서
+
+uv init Web_search_MCP
+
+uv venv --python=python3.13
+
+.venv\Scripts\activate
+
+
+uv pip install mcp duckduckgo-search requests beautifulsoup4
+
+
+# 에러 메세지 발생하여 다시 아래와 같이 설치함
+
+uv pip install mcp
+
+uv pip install duckduckgo-search
+
+uv pip install requests
+
+uv pip install bs4
+
+# 에러 메세지 발생 : 덕덕고 설치 명령어 변경
+UV pip install ddgs
