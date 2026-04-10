@@ -1,0 +1,24 @@
+pdfplumber
+sentence-transformers
+faiss-cpu
+numpy
+pickle-mixin
+
+
+
+'''
+실행 오류가 있어, 아래와 같이 가상환경 다시 구성함 (260410)
+
+권장: 가상환경 새로 만드는 방법
+
+가장 안정적인 방법입니다.
+
+cd /Users/wontaelee/dev/dev_2026/RAG_service_pdf_260410
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install pdfplumber sentence-transformers faiss-cpu numpy
+'''
+
+# 실행 방법 : python src/main.py
