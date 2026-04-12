@@ -1,0 +1,6 @@
+/Users/wontaelee/dev/dev_2026/RAG_service_pdf_260410
+
+FAISS를 이용하여 PDF 파일을 FAISS 벡터 데이터 베이스로 만드는 과정은
+위의 프로그램에서 이용하자 (260412)
+
+main.py > build_vectordb 메서드에 정의되어 있음 (260412)
