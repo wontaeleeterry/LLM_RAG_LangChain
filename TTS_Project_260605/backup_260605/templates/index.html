@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>TTS Web App</title>
+
+<style>
+
+body{
+
+    font-family: Arial, sans-serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    background:#f5f5f5;
+}
+
+
+.main-container{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+
+.voice-row{
+
+    margin-bottom:15px;
+}
+
+
+.voice-row label{
+
+    font-weight:bold;
+
+    margin-right:10px;
+}
+
+
+.voice-row select{
+
+    padding:5px;
+}
+
+
+.container{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+}
+
+
+textarea{
+
+    width:650px;
+
+    height:250px;
+
+    resize:none;
+
+    padding:10px;
+
+    font-size:18px;
+}
+
+
+.buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+
+button{
+
+    width:120px;
+
+    height:45px;
+
+    font-size:16px;
+
+    cursor:pointer;
+}
+
+
+button:disabled{
+
+    opacity:0.5;
+
+    cursor:not-allowed;
+}
+
+
+.loading-container{
+
+    display:none;
+
+    text-align:center;
+
+    margin-top:20px;
+}
+
+
+.spinner{
+
+    width:50px;
+
+    height:50px;
+
+    border:6px solid #dddddd;
+
+    border-top:6px solid #4CAF50;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+}
+
+
+.loading-text{
+
+    margin-top:10px;
+
+    font-size:16px;
+}
+
+
+@keyframes spin{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+audio{
+
+    margin-top:20px;
+
+    width:650px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="voice-row">
+
+        <label for="voiceSelect">
+            Voice
+        </label>
+
+        <select id="voiceSelect">
+
+            {% for voice in voices %}
+
+            <option value="{{ voice }}">
+                {{ voice }}
+            </option>
+
+            {% endfor %}
+
+        </select>
+
+    </div>
+
+    <div class="container">
+
+        <textarea
+            id="inputText"
+            placeholder="Enter English text here..."
+        ></textarea>
+
+        <div class="buttons">
+
+            <button id="enterBtn">
+                Enter
+            </button>
+
+            <button id="clearBtn">
+                Clear
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+        id="loadingContainer"
+        class="loading-container"
+    >
+
+        <div class="spinner"></div>
+
+        <div class="loading-text">
+            Generating speech...
+        </div>
+
+    </div>
+
+    <audio
+        id="player"
+        controls
+    ></audio>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
