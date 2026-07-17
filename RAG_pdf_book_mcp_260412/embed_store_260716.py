@@ -1,26 +1,12 @@
 import faiss
 import pickle
 import numpy as np
-# from sentence_transformers import SentenceTransformer
-
-# 수정 : 다운로드 형태로 (260716)
-from pathlib import Path
 from sentence_transformers import SentenceTransformer
 
-BASE_DIR = Path(__file__).resolve().parent
-
-MODEL_PATH = BASE_DIR / "models" / "all-MiniLM-L6-v2"
-
-###
 
 class VectorStore:
     def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
-        # self.model = SentenceTransformer(model_name)          # 다운로드 형태로 수정 (260716)
-        self.model = SentenceTransformer(
-            str(MODEL_PATH),
-            local_files_only=True
-        )  # 수정 (260716)
-        
+        self.model = SentenceTransformer(model_name)
         self.dimension = 384
 
         # L2 거리 -> Inner Product

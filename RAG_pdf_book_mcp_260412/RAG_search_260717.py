@@ -1,9 +1,6 @@
 from pathlib import Path
 from embed_store import VectorStore
 
-# count 기능 추가(260717)
-import re
-
 
 class RAGEngine:
     def __init__(self):
@@ -29,22 +26,3 @@ class RAGEngine:
             [f"[Page {d.get('page', '?')}] {d.get('text', '')}" for d in docs]
         )
         return context
-
-    # count 기능 추가(260717)
-    def count_expression(self, expression: str):
-
-        self.load_db()
-
-        total = 0
-
-        for doc in self.store.metadata:
-            text = doc["text"]
-            total += len(
-                re.findall(
-                    re.escape(expression),
-                    text,
-                    flags=re.IGNORECASE
-                )
-            )
-
-        return total

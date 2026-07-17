@@ -1,8 +1,6 @@
 from fastmcp import FastMCP
 from RAG_search import RAGEngine
 
-# 표현 숫자 세기 추가 (260717)
-import re
 
 mcp = FastMCP("RAG PDF Book MCP")
 rag = RAGEngine()
@@ -28,14 +26,6 @@ def retrieve_context(query: str, top_k: int = 10) -> str:
 
 위 context만 근거로 정확하게 답변하세요.
 """
-
-# 표현 숫자 세기 추가 (260717)
-@mcp.tool()
-def count_expression(expression: str):
-
-    count = rag.count_expression(expression)
-
-    return f'"{expression}"은 전체 문서에서 {count}회 등장합니다.'
 
 
 if __name__ == "__main__":
